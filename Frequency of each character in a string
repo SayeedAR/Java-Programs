@@ -1,0 +1,25 @@
+public class Main
+{
+	public static void main(String[] args) {
+	   String str="hero here for find full like";
+	   int n=str.length();
+	   int count[]=new int[256];
+	   for(int i=0;i<n;i++){
+	       count[str.charAt(i)]++;
+	   }
+	   int ch[]=new int[n];
+	   for(int i=0;i<n;i++){
+	       ch[i]=str.charAt(i);
+	       int flag=0;
+	       for(int j=0;j<=i;j++){
+	           if(str.charAt(i)==ch[j]){
+	               flag++;
+	           }
+	       }
+	       if(flag==1){
+	           System.out.println("Number of occurence of "+str.charAt(i)+" is: "+count[str.charAt(i)]);
+	       }
+	   }
+	
+	}
+}
