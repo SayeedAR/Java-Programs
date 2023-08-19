@@ -1,0 +1,30 @@
+package prog7758;
+import java.util.*;
+public class prog7758 {
+    public static void main(String[] args) {
+    	Scanner sc=new Scanner(System.in);
+    	int n=sc.nextInt();
+    	int arr[]=new int[n];
+    	for(int i=0;i<n;i++) {
+    		arr[i]=sc.nextInt();
+    	}
+    	int a[]=new int[n];
+    	int m=0;
+    	for(int i=0;i<n;i++) {
+    		int count=0;
+    		for(int j=i;j<n-1;j++) {
+    			if(arr[j]>arr[i]) {
+    				count=1;
+    				break;
+    			}
+    		}
+    		if(count==0) {
+    			a[m++]=arr[i];
+    		}
+    	}
+    	for(int i=0;i<m;i++) {
+    		System.out.print(a[i]+" ");
+    	}
+    	
+    }
+}
